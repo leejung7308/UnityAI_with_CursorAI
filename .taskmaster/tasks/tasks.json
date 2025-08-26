@@ -1,0 +1,388 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Project Setup and Architecture Planning",
+        "description": "Initialize Unity project with 6000.2.0f13, configure URP, and establish a streamlined architecture for rapid prototyping.",
+        "status": "pending",
+        "dependencies": [],
+        "priority": "high",
+        "details": "1. Create a new Unity 6000.2.0f13 project\n2. Install and configure Universal Render Pipeline (URP)\n3. Set up minimal project folder structure (Scripts, Prefabs, Scenes, Art, Audio)\n4. Configure version control (Git) with appropriate .gitignore\n5. Create simplified scene structure (Main Menu, Game)\n6. Set up Input System package for cross-platform input handling\n7. Configure build settings for PC platform primarily, with mobile as secondary\n8. Document key architecture decisions in a simplified format\n9. Create a GameManager singleton for global state management\n10. Leverage Unity AI for code generation of boilerplate systems",
+        "testStrategy": "Verify project builds successfully on Windows/macOS. Test basic scene navigation. Ensure URP is correctly configured with appropriate quality settings. Validate input system works with both mouse/keyboard and touch inputs.",
+        "subtasks": []
+      },
+      {
+        "id": 2,
+        "title": "Core Manager System Implementation with Unity AI",
+        "description": "Implement essential manager classes using Unity AI code generation to accelerate development.",
+        "status": "pending",
+        "dependencies": [
+          1
+        ],
+        "priority": "high",
+        "details": "Create the following manager classes using a singleton pattern with Unity AI assistance:\n1. GameManager: Controls game state and scene management\n2. OrderManager: Handles simplified order generation and validation\n3. IngredientManager: Manages basic ingredient inventory\n4. CustomerManager: Controls customer spawning and basic behavior\n5. UIManager: Controls all UI elements and transitions\n6. AudioManager: Manages sound effects and background music\n\nUse Unity AI to generate boilerplate code and event systems. Focus on minimal viable implementation for each manager to enable rapid prototyping within the 2-week timeframe.",
+        "testStrategy": "Manually test each manager's core functionality. Verify proper initialization and basic communication between managers. Test basic game flow from start to finish.",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Data Structure Design with ScriptableObjects and Unity AI",
+        "description": "Design simplified ScriptableObject-based data structures with Unity AI assistance for rapid content creation.",
+        "status": "pending",
+        "dependencies": [
+          1
+        ],
+        "priority": "high",
+        "details": "1. Create basic ScriptableObject classes for:\n   - Ingredient (name, sprite, cost)\n   - Recipe (name, required ingredients, price)\n   - Customer (type, patience, sprite)\n   - Upgrade (type, cost, effect)\n\n2. Use Unity AI to generate editor tools for data creation\n3. Create minimal initial data assets for prototype gameplay\n4. Use Unity AI to generate placeholder sprites and textures\n5. Implement basic data validation\n\nFocus on creating just enough data structure to support the prototype. Use Unity AI's content generation capabilities to quickly populate the game with placeholder assets.",
+        "testStrategy": "Manually verify data assets load correctly. Test basic gameplay with the created assets. Ensure core game mechanics work with the simplified data structures.",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Simplified Save System Implementation",
+        "description": "Develop a basic save/load system to persist essential player progress across game sessions.",
+        "status": "pending",
+        "dependencies": [
+          2,
+          3
+        ],
+        "priority": "low",
+        "details": "1. Design minimal serializable data structures for game state\n2. Implement JSON serialization using Unity's JsonUtility\n3. Create save/load methods for:\n   - Player progress (level, currency)\n   - Purchased upgrades\n   - Game settings\n4. Implement auto-save functionality at key game points\n5. Handle platform-specific storage paths\n\nFocus on a simplified save system that covers only essential game data. Use Unity AI to help generate serialization code and data structures.",
+        "testStrategy": "Test basic save/load functionality. Verify essential data persists across game sessions. Test on primary development platform.",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "UI Framework and Main Menu Implementation with Unity AI",
+        "description": "Rapidly design and implement UI framework and main menu screens using Unity AI assistance.",
+        "status": "pending",
+        "dependencies": [
+          1,
+          2
+        ],
+        "priority": "high",
+        "details": "1. Set up UI Toolkit framework for faster UI development\n2. Create responsive UI layout that works on target platforms\n3. Implement essential screens:\n   - Main Menu (Play, Settings, Exit)\n   - Settings Menu (Sound, Graphics)\n   - Pause Menu\n4. Use Unity AI to generate UI animations and transitions\n5. Implement UI manager to handle screen navigation\n6. Create basic reusable UI components\n7. Add essential settings functionality\n\nLeverage Unity AI to generate UI layouts, animations, and basic functionality. Focus on creating a functional and visually appealing UI within the 2-week timeframe.",
+        "testStrategy": "Test UI on primary target resolution. Verify essential navigation paths work correctly. Ensure UI is responsive and visually consistent.",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Kitchen Environment and Basic Gameplay Setup with Unity AI",
+        "description": "Create the main kitchen environment and implement core gameplay elements using Unity AI for rapid asset generation.",
+        "status": "pending",
+        "dependencies": [
+          1,
+          2,
+          3
+        ],
+        "priority": "high",
+        "details": "1. Design simplified kitchen scene layout\n2. Create essential workstations (assembly area, serving counter)\n3. Implement basic ingredient placement system\n4. Set up camera positioning\n5. Create drag-and-drop system for ingredients\n6. Implement basic burger assembly logic\n7. Add visual feedback for correct/incorrect assembly\n8. Use Unity AI to generate placeholder art assets, textures and materials\n\nLeverage Unity AI for generating environment assets, textures, and basic animations. Focus on implementing core gameplay mechanics with minimal visual polish.",
+        "testStrategy": "Test core drag-and-drop functionality. Verify ingredients stack correctly. Ensure visual feedback is clear and immediate.",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Simplified Order Generation and Management System",
+        "description": "Implement a streamlined order generation and management system for the prototype.",
+        "status": "pending",
+        "dependencies": [
+          2,
+          3,
+          5,
+          6
+        ],
+        "priority": "high",
+        "details": "1. Design simplified order generation algorithm\n2. Implement basic order queue system with visual representation\n3. Create order timer indicators\n4. Implement basic order validation logic\n5. Add order completion and failure handling\n6. Create simple order card UI elements\n7. Use Unity AI to generate order visualization assets\n\nFocus on implementing a functional but simplified order system that demonstrates the core gameplay loop. Use Unity AI to accelerate UI asset creation and basic logic implementation.",
+        "testStrategy": "Test order generation and completion flow. Verify timers work correctly. Ensure order validation correctly identifies correct and incorrect burger assemblies.",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Basic Customer System Implementation with Unity AI",
+        "description": "Develop a simplified customer system with Unity AI-generated assets and behaviors.",
+        "status": "pending",
+        "dependencies": [
+          2,
+          3,
+          7
+        ],
+        "priority": "medium",
+        "details": "1. Create basic customer spawning system\n2. Implement essential customer types (regular, VIP)\n3. Design simplified customer behavior\n4. Implement basic patience metrics\n5. Use Unity AI to generate customer animations and visuals\n6. Add simple customer reaction system\n7. Implement basic tipping system\n\nLeverage Unity AI to generate customer models, animations, and behavior scripts. Focus on creating a functional customer system with minimal complexity.",
+        "testStrategy": "Test basic customer spawning and behavior. Verify customer reactions to order completion. Ensure customer visuals and animations work correctly.",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Simplified Ingredient System with Unity AI",
+        "description": "Implement a streamlined ingredient system with Unity AI-generated assets.",
+        "status": "pending",
+        "dependencies": [
+          2,
+          3,
+          6
+        ],
+        "priority": "high",
+        "details": "1. Create basic ingredient selection UI\n2. Implement simplified ingredient inventory tracking\n3. Create basic restocking mechanics\n4. Add visual representation of available ingredients\n5. Use Unity AI to generate ingredient visuals and animations\n\nLeverage Unity AI for generating ingredient assets, textures, and animations. Focus on implementing core ingredient functionality with minimal complexity.",
+        "testStrategy": "Test basic inventory tracking. Verify restocking mechanics work correctly. Ensure ingredients can be selected and used in burger assembly.",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Core Burger Assembly System with Unity AI",
+        "description": "Create the essential burger assembly system with Unity AI assistance for visuals and effects.",
+        "status": "pending",
+        "dependencies": [
+          6,
+          7,
+          9
+        ],
+        "priority": "high",
+        "details": "1. Implement drag-and-drop system for ingredients\n2. Create simplified ingredient stacking\n3. Add visual feedback for correct placement\n4. Implement basic recipe validation logic\n5. Add simple effects for successful assembly\n6. Use Unity AI to generate visual effects and animations\n\nLeverage Unity AI to generate visual effects, animations, and feedback elements. Focus on creating a satisfying but simplified burger assembly experience.",
+        "testStrategy": "Test assembly with various burger configurations. Verify validation logic correctly identifies matching and non-matching orders. Ensure visual feedback is clear.",
+        "subtasks": []
+      },
+      {
+        "id": 11,
+        "title": "Simplified Economy and Progression System",
+        "description": "Implement a basic economic system for the prototype.",
+        "status": "pending",
+        "dependencies": [
+          2,
+          3,
+          4,
+          7,
+          8
+        ],
+        "priority": "medium",
+        "details": "1. Create simplified currency system\n2. Implement basic level progression\n3. Add simple experience mechanics\n4. Create end-of-day summary screen\n5. Implement basic difficulty scaling\n\nFocus on creating a functional but streamlined economy system that demonstrates the core progression loop. Use Unity AI to help generate UI elements and progression logic.",
+        "testStrategy": "Test basic currency calculations. Verify progression mechanics work as expected. Ensure difficulty scaling provides appropriate challenge.",
+        "subtasks": []
+      },
+      {
+        "id": 12,
+        "title": "Basic Upgrade System with Unity AI",
+        "description": "Develop a simplified upgrade system for the prototype.",
+        "status": "pending",
+        "dependencies": [
+          3,
+          4,
+          11
+        ],
+        "priority": "low",
+        "details": "1. Create basic upgrade UI\n2. Implement essential equipment upgrade mechanics\n3. Add visual changes to reflect upgrades\n4. Use Unity AI to generate upgrade visuals and effects\n\nLeverage Unity AI to generate upgrade visuals and effects. Focus on implementing a few key upgrades that demonstrate the system's potential.",
+        "testStrategy": "Test upgrade purchase and application. Verify upgrade effects work correctly. Ensure visual changes reflect purchased upgrades.",
+        "subtasks": []
+      },
+      {
+        "id": 13,
+        "title": "Minimal Achievement System",
+        "description": "Implement a basic achievement system for the prototype.",
+        "status": "pending",
+        "dependencies": [
+          4,
+          11
+        ],
+        "priority": "low",
+        "details": "1. Design simplified achievement structure\n2. Implement basic achievement tracking\n3. Add simple achievement notifications\n4. Create minimal achievement UI\n\nFocus on implementing a few key achievements that demonstrate the system. Use Unity AI to help generate achievement icons and notification effects.",
+        "testStrategy": "Test achievement triggering for implemented achievements. Verify achievement notifications appear correctly.",
+        "subtasks": []
+      },
+      {
+        "id": 14,
+        "title": "Basic Audio System with Unity AI",
+        "description": "Develop a simplified audio system using Unity AI for sound generation.",
+        "status": "pending",
+        "dependencies": [
+          2,
+          5
+        ],
+        "priority": "medium",
+        "details": "1. Set up basic AudioManager\n2. Implement essential background music\n3. Add core sound effect categories\n4. Use Unity AI to generate sound effects and music\n5. Implement basic volume controls\n\nLeverage Unity AI to generate sound effects and background music. Focus on creating a functional audio system with minimal complexity.",
+        "testStrategy": "Test audio playback for key game events. Verify volume controls work correctly. Ensure audio properly pauses and resumes with game state.",
+        "subtasks": []
+      },
+      {
+        "id": 15,
+        "title": "Essential Visual Feedback with Unity AI",
+        "description": "Implement core visual feedback and effects using Unity AI for rapid creation.",
+        "status": "pending",
+        "dependencies": [
+          6,
+          7,
+          8,
+          10
+        ],
+        "priority": "medium",
+        "details": "1. Create basic particle effects for key moments\n2. Implement essential UI animations\n3. Add simple visual feedback for game events\n4. Use Unity AI to generate particles, animations, and effects\n\nLeverage Unity AI to generate visual effects, animations, and feedback elements. Focus on creating clear feedback for the most important game actions.",
+        "testStrategy": "Test visual effects for key game events. Verify effects provide clear feedback. Ensure effects are appropriately visible.",
+        "subtasks": []
+      },
+      {
+        "id": 16,
+        "title": "Simplified Tutorial System",
+        "description": "Create a basic tutorial system to teach essential game mechanics.",
+        "status": "pending",
+        "dependencies": [
+          5,
+          6,
+          7,
+          9,
+          10
+        ],
+        "priority": "medium",
+        "details": "1. Design simplified tutorial flow\n2. Implement basic guided instructions\n3. Create simple tooltips for key elements\n4. Add tutorial skip option\n\nFocus on creating a minimal but effective tutorial that teaches the core game mechanics. Use Unity AI to help generate tutorial text and highlight effects.",
+        "testStrategy": "Test tutorial flow with various interaction patterns. Verify essential mechanics are explained. Ensure tutorial can be skipped.",
+        "subtasks": []
+      },
+      {
+        "id": 17,
+        "title": "Basic Performance Optimization",
+        "description": "Implement essential optimizations to ensure the prototype runs smoothly.",
+        "status": "pending",
+        "dependencies": [
+          6,
+          9,
+          10,
+          14,
+          15
+        ],
+        "priority": "medium",
+        "details": "1. Implement basic asset loading optimization\n2. Optimize essential particle effects\n3. Implement basic texture compression\n4. Use Unity AI to optimize generated assets\n\nFocus on implementing critical optimizations to ensure the prototype runs smoothly on target hardware. Use Unity AI to help identify and fix performance issues.",
+        "testStrategy": "Test performance on target hardware. Verify frame rate remains acceptable during gameplay. Ensure no critical performance issues exist.",
+        "subtasks": []
+      },
+      {
+        "id": 18,
+        "title": "Essential Cross-Platform Input System",
+        "description": "Implement a simplified input system for primary target platforms.",
+        "status": "pending",
+        "dependencies": [
+          1,
+          5,
+          6
+        ],
+        "priority": "high",
+        "details": "1. Implement basic input detection\n2. Create essential platform-specific input handlers\n3. Optimize touch controls for mobile if targeting mobile\n4. Implement basic keyboard shortcuts for PC\n\nFocus on creating a functional input system for primary target platforms. Use Unity AI to help generate input handling code.",
+        "testStrategy": "Test input on primary target platforms. Verify essential game actions can be performed. Ensure input feels responsive.",
+        "subtasks": []
+      },
+      {
+        "id": 19,
+        "title": "Basic Game Balancing",
+        "description": "Implement essential game balancing for the prototype.",
+        "status": "pending",
+        "dependencies": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "priority": "medium",
+        "details": "1. Balance basic ingredient costs and selling prices\n2. Implement simplified customer patience scaling\n3. Balance core upgrade costs and effects\n4. Use Unity AI to help analyze and suggest balance adjustments\n\nFocus on balancing the core gameplay loop to ensure the prototype is fun and challenging. Use Unity AI to help identify balance issues and suggest improvements.",
+        "testStrategy": "Test game balance through playtesting. Verify the difficulty curve feels appropriate. Ensure the economy feels balanced for the prototype scope.",
+        "subtasks": []
+      },
+      {
+        "id": 20,
+        "title": "Minimal Special Events System",
+        "description": "Implement a basic special event for the prototype.",
+        "status": "pending",
+        "dependencies": [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "priority": "low",
+        "details": "1. Create one special event type\n2. Implement basic event triggering\n3. Add simple visual indicators for the event\n4. Use Unity AI to generate event visuals and effects\n\nFocus on implementing a single special event type to demonstrate the concept. Use Unity AI to help generate event assets and effects.",
+        "testStrategy": "Test event triggering and effects. Verify the event provides meaningful gameplay variation.",
+        "subtasks": []
+      },
+      {
+        "id": 21,
+        "title": "Basic Analytics for Prototype Testing",
+        "description": "Implement minimal analytics to gather feedback during prototype testing.",
+        "status": "pending",
+        "dependencies": [
+          4,
+          11,
+          19
+        ],
+        "priority": "low",
+        "details": "1. Create simplified analytics event tracking\n2. Implement basic session tracking\n3. Add essential performance monitoring\n\nFocus on implementing just enough analytics to gather useful feedback during prototype testing. Use Unity AI to help generate analytics code.",
+        "testStrategy": "Verify analytics data is collected correctly. Ensure analytics don't impact game performance.",
+        "subtasks": []
+      },
+      {
+        "id": 22,
+        "title": "English-Only Text Implementation",
+        "description": "Implement text content for the English version of the prototype.",
+        "status": "pending",
+        "dependencies": [
+          5
+        ],
+        "priority": "medium",
+        "details": "1. Create text content for UI elements\n2. Implement game instructions and tutorials\n3. Add character dialogue and flavor text\n4. Use Unity AI to help generate and refine text content\n\nFocus on creating clear and engaging English text for the prototype. Use Unity AI to help generate and improve text content.",
+        "testStrategy": "Review all text for clarity and correctness. Verify text displays properly in the UI.",
+        "subtasks": []
+      },
+      {
+        "id": 23,
+        "title": "Essential Polish and Juice with Unity AI",
+        "description": "Add critical polish elements to enhance the prototype experience.",
+        "status": "pending",
+        "dependencies": [
+          10,
+          14,
+          15
+        ],
+        "priority": "medium",
+        "details": "1. Implement basic screen shake and feedback\n2. Add essential animation flourishes\n3. Create key sound effect layers\n4. Use Unity AI to generate polish elements and effects\n\nLeverage Unity AI to generate polish elements like animations, effects, and transitions. Focus on adding polish to the most important game moments.",
+        "testStrategy": "Verify polish elements enhance the gameplay experience. Ensure effects don't distract from core gameplay.",
+        "subtasks": []
+      },
+      {
+        "id": 24,
+        "title": "Rapid Testing and Iteration",
+        "description": "Implement streamlined testing procedures for rapid iteration.",
+        "status": "pending",
+        "dependencies": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "priority": "high",
+        "details": "1. Create basic testing checklist\n2. Implement essential debug tools\n3. Add simple crash reporting\n4. Create quick feedback collection mechanism\n5. Use Unity AI to help identify and fix common issues\n\nFocus on implementing just enough testing infrastructure to enable rapid iteration. Use Unity AI to help identify and fix common issues.",
+        "testStrategy": "Conduct regular playtest sessions. Collect and address critical feedback. Ensure the prototype is stable enough for demonstration.",
+        "subtasks": []
+      },
+      {
+        "id": 25,
+        "title": "Demo Build Preparation",
+        "description": "Prepare the prototype for demonstration within the 2-week timeframe.",
+        "status": "pending",
+        "dependencies": [
+          1,
+          4,
+          17,
+          21,
+          24
+        ],
+        "priority": "high",
+        "details": "1. Configure build settings for primary target platform\n2. Create build automation script\n3. Implement version display\n4. Create simple startup and loading screens\n5. Add basic crash handling\n6. Prepare demonstration script and talking points\n\nFocus on creating a stable and presentable build for demonstration. Use Unity AI to help optimize the build process and identify potential issues.",
+        "testStrategy": "Test the build on target platform. Verify all essential features work correctly. Ensure the demo presents well and highlights key features.",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-08-26T02:49:10.457Z",
+      "updated": "2025-08-26T02:49:10.457Z",
+      "description": "Tasks for master context"
+    }
+  }
+}
